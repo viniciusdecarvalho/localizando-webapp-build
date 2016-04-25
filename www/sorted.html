@@ -1,0 +1,92 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Listview Autodivider Linkbar - jQuery Mobile Demos</title><link rel="shortcut icon" href="../favicon.ico"><link rel="stylesheet" href="css/app.css"><style type="text/css">#sorter li {
+            height: 3.8%;
+            padding: 0;
+            font-size: 8px;
+            padding-left: 5px;
+            line-height: 1.8em;
+            text-align: left;
+        }
+        #sorter li span {
+            margin-top: 8%;
+            display: block;
+        }
+        #sorter{
+            position: fixed;
+            top: 60px;
+            right: 0;
+            width: 20px;
+            z-index: 1;
+        }
+        #sorter ul{
+            height: 100%;
+        }
+        #sortedList{
+            padding-right: 35px;
+        }</style><script src="js/vendor.js"></script><script>$.mobile.document.on( "pagecreate", "#demo-page", function(){
+            var head = $( ".ui-page-active [data-role='header']" );
+
+            $.mobile.document.on( "click", "#sorter li", function() {
+                var top,
+                    letter = $( this ).text(),
+                    divider = $( "#sortedList" ).find( "li.ui-li-divider:contains(" + letter + ")" );
+
+                if ( divider.length > 0 ) {
+                    top = divider.offset().top;
+                    $.mobile.silentScroll( top );
+                } else {
+                    return false;
+                }
+            });
+            $( "#sorter li" ).hover(function() {
+                $( this ).addClass( "ui-btn" ).removeClass( "ui-li-static" );
+            }, function() {
+                $( this ).removeClass( "ui-btn" ).addClass( "ui-li-static" );
+            });
+        });
+        $( function(){
+            $.mobile.window.on( "scroll", function( e ) {
+                var headTop = $(window).scrollTop(),
+                    foot = $( ".ui-page-active [data-role='footer']" ),
+                    head = $( ".ui-page-active [data-role='header']" ),
+                    headerheight = head.outerHeight();
+
+                if( headTop < headerheight && headTop > 0 ) {
+                    $( "#sorter" ).css({
+                        "top": headerheight + 15 - headTop,
+                        "height": window.innerHeight - head[ 0 ].offsetHeight + window.pageYOffset - 10
+                    });
+                    $("#sorter li").height( "3.7%" );
+                } else if ( headTop >= headerheight && headTop > 0 && parseInt( headTop +
+                    $.mobile.window.height( )) < parseInt( foot.offset().top ) ) {
+
+                    $( "#sorter" ).css({
+                        "top": "15px",
+                        "height": window.innerHeight - 8
+                    });
+                    $("#sorter li").height( "3.7%" );
+                } else if ( parseInt( headTop + window.innerHeight ) >= parseInt( foot.offset().top ) &&
+                    parseInt( headTop + window.innerHeight ) <= parseInt( foot.offset().top ) +
+                    foot.height() ) {
+
+                    $( "#sorter" ).css({
+                        "top": "15px",
+                        "height": window.innerHeight - ( parseInt( headTop + window.innerHeight ) -
+                            parseInt( foot.offset().top ) + 8 )
+                    });
+                } else if( parseInt( headTop + window.innerHeight ) >= parseInt( foot.offset().top ) ) {
+                    $( "#sorter" ).css({
+                        "top": "15px"
+                    });
+                } else {
+                    $( "#sorter" ).css( "top", headerheight + 15 );
+                }
+            });
+        });
+        $.mobile.window.on( "throttledresize", function() {
+            $( "#sorter" ).height( window.innerHeight - headerheight - 20 ).css( "top", headerheight + 18 );
+        });
+        $.mobile.document.on( "pageshow", "#demo-page", function() {
+            var headerheight = $( ".ui-page-active [data-role='header']" ).outerHeight();
+
+            $( "#sorter" ).height( window.innerHeight - headerheight - 20 ).css( "top", headerheight + 18 );
+        });</script></head><body><div data-role="page" id="demo-page"><div data-role="header"><h1>Listview Autodivider Linkbar</h1><a href="../" data-rel="back" data-icon="arrow-l" data-iconpos="notext" data-ajax="false">Back</a></div><div role="main" class="ui-content"><div id="sorter"><ul data-role="listview"><li><span>A</span></li><li><span>B</span></li><li><span>C</span></li><li><span>D</span></li><li><span>E</span></li><li><span>F</span></li><li><span>G</span></li><li><span>H</span></li><li><span>I</span></li><li><span>J</span></li><li><span>K</span></li><li><span>L</span></li><li><span>M</span></li><li><span>N</span></li><li><span>O</span></li><li><span>P</span></li><li><span>Q</span></li><li><span>R</span></li><li><span>S</span></li><li><span>T</span></li><li><span>U</span></li><li><span>V</span></li><li><span>W</span></li><li><span>X</span></li><li><span>Y</span></li><li><span>Z</span></li></ul></div><ul data-role="listview" data-autodividers="true" id="sortedList"><li><a href="#">Aaron</a></li><li><a href="#">Adam</a></li><li><a href="#">Alexander</a></li><li><a href="#">Alice</a></li><li><a href="#">Andrew</a></li><li><a href="#">Anna</a></li><li><a href="#">Anthony</a></li><li><a href="#">Audrey</a></li><li><a href="#">Benjamin</a></li><li><a href="#">Brandon</a></li><li><a href="#">Brody</a></li><li><a href="#">Caleb</a></li><li><a href="#">Cameron</a></li><li><a href="#">Charlotte</a></li><li><a href="#">Chloe</a></li><li><a href="#">Christopher</a></li><li><a href="#">Claire</a></li><li><a href="#">Colin</a></li><li><a href="#">Damien</a></li><li><a href="#">Daniel</a></li><li><a href="#">David</a></li><li><a href="#">Dominic</a></li><li><a href="#">Dylan</a></li><li><a href="#">Edward</a></li><li><a href="#">Elizabeth</a></li><li><a href="#">Elliot</a></li><li><a href="#">Emily</a></li><li><a href="#">Emma</a></li><li><a href="#">Ethan</a></li><li><a href="#">Eva</a></li><li><a href="#">Finn</a></li><li><a href="#">Gabriel</a></li><li><a href="#">Gavin</a></li><li><a href="#">Grace</a></li><li><a href="#">Hannah</a></li><li><a href="#">Harry</a></li><li><a href="#">Henry</a></li><li><a href="#">Ian</a></li><li><a href="#">Isaac</a></li><li><a href="#">Isabel</a></li><li><a href="#">Jack</a></li><li><a href="#">Jackson</a></li><li><a href="#">Jacob</a></li><li><a href="#">James</a></li><li><a href="#">Jason</a></li><li><a href="#">John</a></li><li><a href="#">Jonah</a></li><li><a href="#">Jonathan</a></li><li><a href="#">Julia</a></li><li><a href="#">Kylie</a></li><li><a href="#">Lauren</a></li><li><a href="#">Leah</a></li><li><a href="#">Liam</a></li><li><a href="#">Lillian</a></li><li><a href="#">Lucy</a></li><li><a href="#">Luke</a></li><li><a href="#">Lydia</a></li><li><a href="#">Madeline</a></li><li><a href="#">Mason</a></li><li><a href="#">Matthew</a></li><li><a href="#">Megan</a></li><li><a href="#">Michael</a></li><li><a href="#">Natalie</a></li><li><a href="#">Nathan</a></li><li><a href="#">Nicholas</a></li><li><a href="#">Noah</a></li><li><a href="#">Norah</a></li><li><a href="#">Oliver</a></li><li><a href="#">Olivia</a></li><li><a href="#">Owen</a></li><li><a href="#">Paige</a></li><li><a href="#">Ruby</a></li><li><a href="#">Ryan</a></li><li><a href="#">Samuel</a></li><li><a href="#">Sarah</a></li><li><a href="#">Scarlett</a></li><li><a href="#">Sebastian</a></li><li><a href="#">Seth</a></li><li><a href="#">Sophie</a></li><li><a href="#">Thomas</a></li><li><a href="#">Tristan</a></li><li><a href="#">Tyler</a></li><li><a href="#">Violet</a></li><li><a href="#">Vivienne</a></li><li><a href="#">William</a></li><li><a href="#">Xavier</a></li><li><a href="#">Zachary</a></li><li><a href="#">Zoe</a></li></ul></div><div data-role="footer"><h4>Footer</h4></div></div></body></html>

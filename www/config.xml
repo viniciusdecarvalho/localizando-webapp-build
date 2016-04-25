@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="br.com.localizandoapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Localizando App</name>
+    <description>
+        O Localizando ajuda a encontrar serviços e produtos em determindas localizações, para trazer comodidade, agilidade e opções de novos negócios.
+    </description>
+    <author email="viniciusdecarvalho.tec@gmail.com,bessa.lucas8@gmail.com,bambamlima95@gmail.com" href="http://localizandoapp.com.br">
+        Localizando app team
+    </author>
+    <content src="index.html" />
+
+    <!-- 
+    KeepRunning (boolean, defaults to true): Determines whether the application stays running in the background even after a [pause](../../../cordova/events/events.pause.html) event fires. Setting this to false does not kill the app after a [pause](../../../cordova/events/events.pause.html) event, but simply halts execution of code within the cordova webview while the app is in the background. 
+    -->
+    <preference name="KeepRunning" value="true"/>
+
+    <!-- LoadUrlTimeoutValue (number in milliseconds, default to 20000, 20 seconds): When loading a page, the amount of time to wait before throwing a timeout error. This example specifies 10 seconds rather than 20: -->
+    <preference name="LoadUrlTimeoutValue" value="20000"/>
+
+    <!-- SplashScreen (string, defaults to splash): The name of the file minus its extension in the res/drawable directory. Various assets must share this common name in various subdirectories. -->
+    <preference name="SplashScreen" value="icon"/>
+
+    <!-- SplashScreenDelay (number in milliseconds, defaults to 3000): The amount of time the splash screen image displays. -->
+    <preference name="SplashScreenDelay" value="3000"/>
+
+    <!-- InAppBrowserStorageEnabled (boolean, defaults to true): Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser. -->
+    <preference name="InAppBrowserStorageEnabled" value="true"/>
+
+    <!-- LoadingDialog (string, defaults to null): If set, displays a dialog with the specified title and message, and a spinner, when loading the first page of an application. The title and message are separated by a comma in this value string, and that comma is removed before the dialog is displayed. -->
+    <preference name="LoadingDialog" value="Carregando..."/>
+
+    <!-- LoadingPageDialog (string, defaults to null): The same as LoadingDialog, but for loading every page after the first page in the application. -->
+    <preference name="LoadingPageDialog" value="Carregando..."/>
+
+    <!-- ErrorUrl (URL, defaults to null): If set, will display the referenced page upon an error in the application instead of a dialog with the title "Application Error". -->
+    <preference name="ErrorUrl" value="index.html"/>
+
+    <!-- ShowTitle (boolean, defaults to false): Show the title at the top of the screen. -->
+    <preference name="ShowTitle" value="true"/>
+
+    <!-- LogLevel (string, defaults to ERROR): Sets the minimum log level through which log messages from your application will be filtered. Valid values are ERROR, WARN, INFO, DEBUG, and VERBOSE. -->
+    <preference name="LogLevel" value="ERROR"/>
+
+    <!-- SetFullscreen (boolean, defaults to false): Same as the Fullscreen parameter in the global configuration of this xml file. This Android-specific element is deprecated in favor of the global Fullscreen element, and will be removed in a future version.
+
+    AndroidLaunchMode (string, defaults to singleTop): Sets the Activity android:launchMode attribute. This changes what happens when the app is launched from app icon or intent and is already running. Valid values are standard, singleTop, singleTask, singleInstance. -->
+    <preference name="AndroidLaunchMode" value="singleTop"/>
+
+    <!-- DefaultVolumeStream (string, defaults to default, added in cordova-android 3.7.0): Sets which volume the hardware volume buttons link to. By default this is "call" for phones and "media" for tablets. Set this to "media" to have your app's volume buttons always change the media volume. Note that when using Cordova's media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.
+
+    OverrideUserAgent (string, not set by default): If set, the value will replace the old UserAgent of webview. It is helpful to identify the request from app/browser when requesting remote pages. Use with caution, this may causes compitiable issue with web servers. For most cases, use AppendUserAgent instead. -->
+    <!-- <preference name="OverrideUserAgent" value="Mozilla/5.0 My Browser" /> -->
+
+    <!-- AppendUserAgent (string, not set by default): If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored. -->
+    <!-- <preference name="AppendUserAgent" value="My Browser" /> -->
+
+    <!-- 
+    Orientation allows you to lock orientation and prevent the interface from rotating in response to changes in orientation. Possible values are default, landscape, or portrait 
+    -->
+    <preference name="orientation" value="portrait" />
+
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="cordova-plugin-geolocation" spec="1.0.1" />
+
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <splash src="www/res/screen/icon.png"/>
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="android" spec="~4.0.2" />
+</widget>
