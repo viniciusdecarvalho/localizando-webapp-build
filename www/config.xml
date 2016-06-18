@@ -8,7 +8,7 @@
 
     <name>Localizando App</name>
     <description>
-        O Localizando ajuda a encontrar serviços e produtos em determindas localizações, para trazer comodidade, agilidade e opções de novos negócios.
+        O Localizando ajuda a encontrar serviços e produtos em determinadas localizações, para trazer comodidade, agilidade e opções de novos negócios.
     </description>
     <author email="viniciusdecarvalho.tec@gmail.com,bessa.lucas8@gmail.com,bambamlima95@gmail.com" href="http://localizandoapp.com.br">
         Localizando app team
@@ -27,7 +27,7 @@
     <preference name="SplashScreen" value="splash"/>
 
     <!-- SplashScreenDelay (number in milliseconds, defaults to 3000): The amount of time the splash screen image displays. -->
-    <preference name="SplashScreenDelay" value="3000"/>
+    <preference name="SplashScreenDelay" value="500"/>
 
     <!-- InAppBrowserStorageEnabled (boolean, defaults to true): Controls whether pages opened within an InAppBrowser can access the same localStorage and WebSQL storage as pages opened with the default browser. -->
     <preference name="InAppBrowserStorageEnabled" value="true"/>
