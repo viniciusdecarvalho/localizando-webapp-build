@@ -103,6 +103,17 @@
 
     <preference name="DisallowOverscroll" value="true" />
     <preference name="disable-push-notifications" value="1" />
+    
+        <preference name="windows-phone-target-version" value="8.1" />
+        <preference name="windows-target-version" value="8.1" />
+        <preference name="Windows.Universal" value="10.0.10240.0" />
+        <preference name="WindowsDefaultUriPrefix" value="ms-appx://" />
+        <preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" />
+        <preference name="Windows.Universal-MinVersion" value="10.0.0.0" />
+        <!--<preference name="WindowsStoreIdentityName" value="Cordova.Example.ApplicationDataSample" />-->
+        <!--<preference name="WindowsStorePublisherName" value="CN=Contoso Corp, O=Contoso Corp, L=Redmond, S=Washington, C=US" />-->
+        <preference name="WindowsToastCapable" value="true" />
+        <preference name="uap-target-min-version" value="10.0.10586.0" />
 
     <!-- Plugins can also be added here. -->        
     <!-- A list of available plugins are available at https://build.phonegap.com/docs/plugins -->    
