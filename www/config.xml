@@ -239,9 +239,10 @@
         platform="ios"        
         width="167" 
         height="167" />
-    <!-- 
+    
     <icon src="images/res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
     <icon src="images/res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
+    <!-- 
     <icon src="images/res/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
     <icon src="images/res/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/> 
     <icon src="images/res/icon/webos/icon-64.png"          gap:platform="webos" />
@@ -258,9 +259,8 @@
     <gap:splash src="images/res/screen/ios/screen-iphone-portrait-2x.png"          gap:platform="ios"     width="640" height="960" />
     <gap:splash src="images/res/screen/ios/screen-iphone-portrait-568h-2x.png"     gap:platform="ios"     width="640" height="1136" />
     <gap:splash src="images/res/screen/ios/screen-ipad-landscape.png"              gap:platform="ios"     width="1024" height="768" />
-
-    <!-- 
     <gap:splash src="res/screen/windows-phone/screen-portrait.png" gap:platform="winphone" />
+    <!-- 
     <gap:splash src="res/screen/blackberry/screen-225.png"         gap:platform="blackberry" /> 
     -->
 
