@@ -285,6 +285,8 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 
+    <platform name="winphone"></platform>
+
     <engine name="android" spec="~4.0.2" />
 </widget>
 
