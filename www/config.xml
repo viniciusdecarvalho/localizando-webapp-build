@@ -127,7 +127,7 @@
     <!-- <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" /> -->
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     
-    <plugin name="com.phonegap.plugins.facebookconnect" spec="0.9.0" source="git">
+    <plugin name="cordova-plugin-facebookconnect-orlando" spec="0.11.0" source="git">
         <param name="APP_ID" value="157880291276839" />
         <param name="APP_NAME" value="Loca­l­i­z­a­n­d­oApp" />
     </plugin>
