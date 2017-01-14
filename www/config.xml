@@ -50,7 +50,11 @@
     <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" />
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
-    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />    
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
+        <param name="APP_ID" value="157880291276839" />
+        <param name="APP_NAME" value="Loca­l­i­z­a­n­d­oApp" />
+    </gap:plugin>
     <icon density="ldpi" height="36" platform="android" src="www/res/icon/android/icon-36-ldpi.png" width="36" />
     <icon density="mdpi" height="48" platform="android" src="www/res/icon/android/icon-48-mdpi.png" width="48" />
     <icon density="hdpi" height="72" platform="android" src="www/res/icon/android/icon-72-hdpi.png" width="72" />
