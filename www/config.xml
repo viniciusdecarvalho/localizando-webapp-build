@@ -51,10 +51,10 @@
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-    <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
-        <param name="APP_ID" value="157880291276839" />
-        <param name="APP_NAME" value="Loca­l­i­z­a­n­d­oApp" />
-    </gap:plugin>
+    <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
+        <variable name="APP_ID" value="157880291276839" />
+        <variable name="APP_NAME" value="Loca­l­i­z­a­n­d­oApp" />
+    </plugin>
     <icon density="ldpi" height="36" platform="android" src="www/res/icon/android/icon-36-ldpi.png" width="36" />
     <icon density="mdpi" height="48" platform="android" src="www/res/icon/android/icon-48-mdpi.png" width="48" />
     <icon density="hdpi" height="72" platform="android" src="www/res/icon/android/icon-72-hdpi.png" width="72" />
@@ -106,9 +106,5 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <platform name="winphone" />
-    <engine name="android" spec="~4.0.2" />
-    <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
-        <variable name="APP_ID" value="157880291276839" />
-        <variable name="APP_NAME" value="Loca­l­i­z­a­n­d­oApp" />
-    </plugin>
+    <engine name="android" spec="~4.0.2" />    
 </widget>
