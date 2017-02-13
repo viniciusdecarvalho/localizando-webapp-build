@@ -30,6 +30,15 @@
 
             </div>
 
+            
+
+            <div data-role="page" id="pesquisar" 
+                 data-ng-controller="HomeController">
+
+                <div data-pesquisar></div>
+
+            </div>    
+
             <div data-role="page" id="categorias">
 
                 <div data-categorias></div>
@@ -60,6 +69,14 @@
                 <div data-contatos></div>
 
             </div>
+
+            <div data-role="page" id="facebookauth"
+                 data-ng-controller="RegistrosController"
+                 data-ng-if="!usuario()">
+
+		        <div data-facebookauth></div>
+                
+		    </div>
 
             <div data-role="page" id="login"
                  data-ng-controller="RegistrosController"
