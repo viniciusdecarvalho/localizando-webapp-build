@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
         id="br.com.localizandoapp" 
-        version="0.6.7" 
+        version="0.6.8" 
         xmlns="http://www.w3.org/ns/widgets" 
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
         xmlns:gap="http://phonegap.com/ns/1.0">
@@ -24,7 +24,7 @@
     <preference name="LoadUrlTimeoutValue" value="20000"/>
 
     <!-- SplashScreen (string, defaults to splash): The name of the file minus its extension in the www/res/drawable directory. Various assets must share this common name in various subdirectories. -->
-    <preference name="SplashScreen" value="splash"/>
+    <preference name="SplashScreen" value="none"/>
 
     <!-- SplashScreenDelay (number in milliseconds, defaults to 3000): The amount of time the splash screen image displays. -->
     <preference name="SplashScreenDelay" value="500"/>
